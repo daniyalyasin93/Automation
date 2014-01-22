@@ -1,0 +1,135 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <PreferenceCategory
+            android:title="@string/controls_title">   
+        
+        <Preference
+            	android:id = "@+id/gatecontrol"
+            	android:key = "gatecontrol"
+                android:title= "@string/GateText"
+                android:summary= "@string/sum_GateText"
+                android:icon = "@drawable/gate_icon">
+        
+        </Preference>
+        
+         <SwitchPreference
+             	android:id = "@+id/gardenwatercontrol"
+             	android:key = "garden_water_control_preference"
+             	android:defaultValue="false"
+                android:title= "@string/GardenText"
+                android:summary= "@string/sum_GardenText"
+                android:icon = "@drawable/garden_icon">
+        
+        </SwitchPreference>
+        
+          <SwitchPreference
+                android:id = "@+id/motorcontrol"
+                android:key = "motor_control_preference"
+                android:defaultValue="false"
+                android:title= "@string/MotorText"
+                android:summary= "@string/sum_MotorText"
+                android:icon = "@drawable/motor_icon">
+        
+        </SwitchPreference>
+
+		<ListPreference
+				android:id = "@+id/geysercontrol"
+				android:title= "@string/geyser_title"
+				android:icon = "@drawable/geyser_icon"
+				android:key="geyser_preference"
+				android:defaultValue="0"
+				android:summary = "@string/sum_geyser_title"
+				android:dialogTitle = "@string/geyser_dialog_title"
+				android:entries="@array/geyser_list_preference_array"
+	            android:entryValues="@array/geyservalues_list_preference_array"
+	      />
+
+		<Preference
+                android:title= "@string/water_level_text"
+                android:key="water_level_preference"
+                android:summary= "@string/sum_water_level_text"
+                android:icon = "@drawable/water_tank_icon">
+		 
+         
+        </Preference>
+        
+		 <Preference
+                android:title= "@string/CCTVText"
+                android:summary= "@string/sum_CCTVText"
+                android:icon = "@drawable/camera_icon">
+		 
+            	<intent android:targetClass = "com.MAO.videooverip.ipset"
+                	android:targetPackage= "com.MAO.videooverip"
+                	android:action = "android.intent.action.MAIN"
+                 />
+         
+        </Preference>
+		
+	</PreferenceCategory>
+		
+		
+	<PreferenceCategory
+		android:title="Rooms">
+	<PreferenceScreen
+            android:title="@string/room1_title"
+            android:key="room1_screen_preference"
+			android:persistent="false">
+		
+	
+		<SwitchPreference
+         		android:defaultValue="false"
+         		android:icon="@drawable/light"
+         		android:key="room1_light_preference"
+                android:title="@string/Light1"
+                android:summary="@string/sum_light1" />
+        
+        <SwitchPreference
+         		android:defaultValue="false"
+         		android:icon="@drawable/fan"
+         		android:key="room1_fan_preference"
+                android:title="@string/fan1"
+                android:summary="@string/sum_fan1" />
+        
+        <SwitchPreference
+         		android:defaultValue="false"
+         		android:icon="@drawable/fan"
+         		android:key="room1_auto_preference"
+                android:title="@string/automatic"
+                android:summary="@string/sum_automatic" />
+        
+        
+    </PreferenceScreen>
+
+	<PreferenceScreen
+		android:title="@string/room2_title"
+		android:key="room2_screen_preference"
+		android:persistent="false">
+
+
+		<SwitchPreference
+			android:defaultValue="false"
+			android:icon="@drawable/light"
+			android:key="room2_light_preference"
+			android:title="@string/Light1"
+			android:summary="@string/sum_light1" />
+
+        <SwitchPreference
+			android:defaultValue="false"
+			android:icon="@drawable/fan"
+			android:key="room2_fan_preference"
+			android:title="@string/fan1"
+			android:summary="@string/sum_fan1" />
+
+       	<SwitchPreference
+       		android:defaultValue="false"
+       		android:icon="@drawable/fan"
+       		android:key="room2_auto_preference"
+            android:title="@string/automatic"
+            android:summary="@string/sum_automatic" />
+        
+        
+    </PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>
